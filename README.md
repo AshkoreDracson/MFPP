@@ -1,2 +1,3 @@
-# MFPP
-Modular First Person Player
+MFPP Manual & Code Documentation website
+
+Check it out [**here**](https://ashkoredracson.github.io/MFPP/).
