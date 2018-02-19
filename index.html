@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MFPP Manual</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#center-center"> </a>
+<ul>
+<li></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#whats-inside">1. What’s inside?</a></li>
+<li><a href="#code-documentation">2. Code Documentation</a></li>
+<li><a href="#setup--settings">3. Setup & Settings</a></li>
+<li><a href="#player-modules">4. Player Modules</a></li>
+<li><a href="#troubleshooting--tips">5. Troubleshooting & Tips</a></li>
+<li><a href="#contact">6. Contact</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="center-center"><center><img src="https://i.imgur.com/hz5Gk3j.png" alt=""> </center></h1>
+<h3 id="centermodular-first-person-playercenter"><center>Modular First Person Player</center></h3>
+<h4 id="centermanualcenter"><center>MANUAL</center></h4>
+<h4 id="centercompatible-with-unity-2017.3.0f3-and-upcenter"><center>Compatible with Unity 2017.3.0f3 and up</center></h4>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p><a href="#whats-inside">1. What’s inside?</a><br>
+  <a href="#scripting--behaviours">1.1. Scripting &amp; Behaviours</a><br>
+  <a href="#materials--textures">1.2. Materials &amp; Textures</a><br>
+  <a href="#meshes">1.3. Meshes</a><br>
+  <a href="#prefabs">1.4. Prefabs</a><br>
+  <a href="#sounds">1.5. Sounds</a><br>
+<a href="#code-documentation">2. Code Documentation</a><br>
+<a href="#setup--settings">3. Setup &amp; Settings</a><br>
+  <a href="#player">3.1. Player</a><br>
+    <a href="#main-settings">Main Settings</a><br>
+    <a href="#control-settings">Control Settings</a><br>
+    <a href="#collision-settings">Collision Settings</a><br>
+    <a href="#movement-settings">Movement Settings</a><br>
+      <a href="#jump-settings">Jump Settings</a><br>
+      <a href="#sprint-settings">Sprint Settings</a><br>
+      <a href="#crouch-settings">Crouch Settings</a><br>
+    <a href="#footstep-settings">Footstep Settings</a><br>
+  <a href="#footstep-asset">3.2. Footstep Asset</a><br>
+  <a href="#footstep-data">3.3. Footstep Data</a><br>
+  <a href="#footstep-override">3.4. Footstep Override</a><br>
+  <a href="#player-update-flow">3.5. Player update flow</a><br>
+<a href="#player-modules">4. Player Modules</a><br>
+  <a href="#adding-a-module">4.1. Adding a module</a><br>
+  <a href="#bob-module">4.2. Bob Module</a><br>
+  <a href="#pick-up-module">4.3. Pick Up Module</a><br>
+  <a href="#rigidbody-push-module">4.4. Rigidbody Push Module</a><br>
+  <a href="#ladder-module">4.5. Ladder Module</a><br>
+  <a href="#creating-a-module">4.6. Creating a module</a><br>
+<a href="#troubleshooting--tips">5. Troubleshooting &amp; Tips</a><br>
+  <a href="#the-player-goes-right-through-rigidbodies-sometimes">5.1. The Player goes right through rigidbodies sometimes</a><br>
+  <a href="#changing-what-the-player-collides-with">5.2. Changing what the Player collides with</a><br>
+  <a href="#my-footsteps-doesnt-work">5.3 My footsteps doesn’t work</a><br>
+<a href="#contact">6. Contact</a></p>
+<h2 id="whats-inside">1. What’s inside?</h2>
+<h3 id="scripting--behaviours">1.1. Scripting &amp; Behaviours</h3>
+<ul>
+<li>Fully featured first person player controller
+<ul>
+<li>Adjustable character controller
+<ul>
+<li>Radius, height, camera height, slope limit, step offset</li>
+</ul>
+</li>
+<li>Adjustable control input
+<ul>
+<li>Enable or disable controls on the fly</li>
+<li>Freedom of choice of axis and button names</li>
+<li>Mouse locking</li>
+<li>Mouse sensitivity</li>
+<li>Mouse smoothing</li>
+</ul>
+</li>
+<li>Adjustable collisions
+<ul>
+<li>Character Controller basics (Static overlap detection)</li>
+<li>Continuous collision detection system (Enables collisions and proper kinematic movement from kinematic rigidbodies)</li>
+</ul>
+</li>
+<li>Basic movement
+<ul>
+<li>Base speed</li>
+<li>Acceleration &amp; deceleration</li>
+<li>First person mouse look</li>
+</ul>
+</li>
+<li>Aerial movement
+<ul>
+<li>Allow or disallow air control</li>
+<li>Air accelerate</li>
+<li>Smart strafing (Similar to Source Engine’s strafing)</li>
+<li>Horizontal and vertical basic strafing along with its speed</li>
+</ul>
+</li>
+<li>Jumping
+<ul>
+<li>Allow or disallow jumping</li>
+<li>Auto-jumping</li>
+<li>Jump power</li>
+<li><abbr title="Bunny Hopping, a skilled jump technique that enables the player who uses it to gain speed by constantly jumping and strafing">Bhopping</abbr> (Auto-jumping + Smart strafing)</li>
+</ul>
+</li>
+<li>Sprinting
+<ul>
+<li>Allow or disallow sprinting</li>
+<li>Sprint speed multiplier</li>
+</ul>
+</li>
+<li>Crouching
+<ul>
+<li>Allow or disallow crouching</li>
+<li>Allow or disallow crouch-jumping</li>
+<li>Set crouch height and crouch camera height</li>
+<li>Act of crouching/standing up speed</li>
+<li>Crouch speed multiplier</li>
+</ul>
+</li>
+<li>Footstep system
+<ul>
+<li>Default (fallback) footsteps</li>
+<li>Unlimited amount of footsteps, jumping and landing sounds per material/texture link</li>
+<li>Single mesh, terrain &amp; sub-mesh / multi-material compatible</li>
+<li>Footstep speed control in different states (Walking, crouching, sprinting)</li>
+<li>Volume control in different states (Walking, crouching, sprinting, landing at different velocities)</li>
+<li>Random pitch control for a more varied feel</li>
+<li>Global volume of the footstep system</li>
+<li>2D and 3D spatial blending</li>
+</ul>
+</li>
+<li>Coding-wise
+<ul>
+<li>Add forces and impulses to the player</li>
+<li>Ability to add modules</li>
+<li>Ability to inherit and override methods</li>
+<li>Events (OnLanded, OnAired, OnFootstep, CollisionDetected, etc…)</li>
+<li>Many many properties that will be helpful in your coding journey (velocity, current collisions, footstep timer left, and much much more!)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Player controller modules
+<ul>
+<li>Bobbing module
+<ul>
+<li>Camera bobbing when moving</li>
+<li>Bobbing amplitude &amp; speed control</li>
+<li>Customizable bobbing animation</li>
+<li>Camera vertical bobbing when landing</li>
+</ul>
+</li>
+<li>Rigidbody pick up module
+<ul>
+<li>Pick up rigidbodies within a certain distance and drop / throw them</li>
+</ul>
+</li>
+<li>Rigidbody push module
+<ul>
+<li>Push away rigidbodies from you with your mighty force</li>
+</ul>
+</li>
+<li>Ladder module
+<ul>
+<li>Climb up ladders set within one or many layers of your choice</li>
+<li>Climbing speed and footstep speed</li>
+<li>Works with the Footstep System</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Audio system
+<ul>
+<li>Play any audio clip
+<ul>
+<li>At any position</li>
+<li>On any parent object</li>
+<li>At any volume &amp; pitch</li>
+<li>2D or 3D spatial blending</li>
+<li>At any range</li>
+</ul>
+</li>
+<li>Automatic cleanup &amp; disposal as soon as the sound is done playing</li>
+<li>Possibility to specify an output audio mixer group for every <code>AudioSource</code> generated from this Audio system</li>
+</ul>
+</li>
+<li>Simple platform system</li>
+<li>A few helper extensions both for <strong><abbr title="Modular First Person Player">MFPP</abbr></strong> and for your own usage
+<ul>
+<li><code>Extensions.GizmosDrawCapsule(Vector3, float, float, float)</code></li>
+<li><code>LayerMask.Contains(int)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="materials--textures">1.2. Materials &amp; Textures</h3>
+<ul>
+<li>Materials
+<ul>
+<li>Dirt</li>
+<li>Floor Tile</li>
+<li>Gold</li>
+<li>Gravel</li>
+<li>Ladder</li>
+<li>Light</li>
+<li>Rough Metal</li>
+<li>Smoke Particle</li>
+<li>Metal Wall</li>
+<li>White</li>
+<li>Wood</li>
+</ul>
+</li>
+<li>Textures of materials mentioned above with their normal map, height map and occlusion map</li>
+</ul>
+<h3 id="meshes">1.3. Meshes</h3>
+<ul>
+<li>Bevel Cube</li>
+<li>Sandbox</li>
+<li>Submesh Cube</li>
+<li>Pipe</li>
+<li>Arch</li>
+<li>Stairs</li>
+<li>Rooms</li>
+<li>Parkour 01</li>
+</ul>
+<h3 id="prefabs">1.4. Prefabs</h3>
+<ul>
+<li>Ready to use Player prefab with all modules</li>
+</ul>
+<h3 id="sounds">1.5. Sounds</h3>
+<ul>
+<li>Basic ambient</li>
+<li>Footstep sounds
+<ul>
+<li>Concrete</li>
+<li>Dirt</li>
+<li>Metal</li>
+<li>Wood</li>
+</ul>
+</li>
+<li>Jumping sound</li>
+</ul>
+<h2 id="code-documentation">2. Code Documentation</h2>
+<p>You can refer to <strong><abbr title="Modular First Person Player">MFPP</abbr></strong>’s code documentation directly through your IDE of choice with Intellisense or by going to the generated code documentation <strong><a href="documentation/index.html">here</a></strong>.</p>
+<p>The entirety of the code in this asset is documented as well as commented to understand the inner workings of it, as well as understanding on how to use it and expand it.</p>
+<h2 id="setup--settings">3. Setup &amp; Settings</h2>
+<p>This section will walk you through how to setup the player controller provided in this asset, along with every of its settings. You can also open the example scene located in <code>Assets 🡲 MFPP 🡲 MFPP Example</code>.</p>
+<h3 id="player">3.1. Player</h3>
+<p>The player controller already has a prefab ready for use and modification located in <code>Assets 🡲 MFPP 🡲 Prefabs 🡲 Player</code>.</p>
+<p>In this prefab, you will have this script attached to the <code>Player</code> game-object. Alternatively, if you are creating a new game object to place the <code>Player</code> script on. You can find it under <code>Add Component &gt; Scripts &gt; MFPP &gt; Player</code>.<br>
+&nbsp;</p><center><img src="https://i.imgur.com/lSLBW85.png" alt=""></center><p></p>
+
+<p>If you are creating the player, do not forget to attach a <code>Camera</code> to it, like so:<br>
+&nbsp;</p><center><img src="https://i.imgur.com/MMFdX58.gif" alt=""><br>
+<sub>(Make sure that the camera is parented to the player!)</sub></center><p></p>
+<p>Along with the <code>Player</code> script, you will also have a <code>Character Controller</code> attached to it automatically, as <code>Player</code> depends on it.<br>
+You can change a few settings on the <code>Character Controller</code> component, such as:</p>
+<ul>
+<li><code>Slope Limit</code> - The character controller’s slope limit in degrees.</li>
+<li><code>Step Offset</code> - The character controller’s step offset in units.</li>
+<li><code>Skin Width</code> - The character’s collision skin width.</li>
+<li><code>Min Move Distance</code> - The minimum move distance of the character controller. <sub>(It is recommended to set this to 0)</sub></li>
+<li><code>Radius</code> - The radius of the character’s capsule.</li>
+</ul>
+<p>Remaining settings on the <code>Character Controller</code> component are controlled by the <code>Player</code> script.</p>
+<p>You can also change all of the properties of the attached <code>Camera</code> just like any normal camera, the <code>Player</code> script only has control over the <code>Transform</code> of the camera.</p>
+<h4 id="main-settings">Main Settings</h4>
+<ul>
+<li><code>Camera</code> - The camera attached to this <code>Player</code>.</li>
+<li><code>Height</code> - The height of this <code>Player</code>.</li>
+<li><code>Camera Height</code> - The camera height of this <code>Player</code>.</li>
+</ul>
+<h4 id="control-settings">Control Settings</h4>
+<ul>
+<li><code>Controls Enabled</code> - Are input controls enabled?<br>
+ </li>
+<li><code>Raw Input</code> - Should we use raw input for any axis?<br>
+ </li>
+<li><code>Mouse Locked</code> - Is the mouse locked?</li>
+<li><code>Mouse X Axis</code> - Axis name for the Mouse X axis.</li>
+<li><code>Mouse Y Axis</code> - Axis name for the Mouse Y axis.</li>
+<li><code>Mouse Sensitivity</code> - The sensitivity of the mouse.</li>
+<li><code>Mouse Smoothing</code> - Smoothness of the mouse movement.<br>
+ </li>
+<li><code>Horizontal Axis</code> - Axis name for the Horizontal axis.</li>
+<li><code>Vertical Axis</code> - Axis name for the Vertical axis.</li>
+<li><code>Jump Button</code> - Button name for the Jump button.</li>
+<li><code>Sprint Button</code> - Button name for the Sprint button.</li>
+<li><code>Crouch Button</code> - Button name for the Crouch button.</li>
+</ul>
+<h4 id="collision-settings">Collision Settings</h4>
+<ul>
+<li><code>Enable Overlap Recovery</code> - Enables or disables overlap recovery. Used to depenetrate character controllers from static objects when an overlap is detected.<br>
+ </li>
+<li><code>Continuous Collision Detection</code> - If enabled, applies an extremely subtle noisy movement pass to the Player to allow for continuous collision detection in all cases.</li>
+<li><code>Continuous Collision Detection Strength</code> - The strength of the continuous detection movement pass. High value assures better collisions but more inaccurate movement. 0.01 is a good value in most cases.</li>
+<li><code>Continuous Collision Detection Passes</code> - The amount of continuous collision passes. High value assures better collisions but is more expensive to compute and character’s skin width feels “thicker”. 1 is the recommended value.</li>
+</ul>
+<h4 id="movement-settings">Movement Settings</h4>
+<ul>
+<li><code>Allow Mouse Move</code> - Should we allow mouse movement?</li>
+<li><code>Allow Movement</code> - Should we allow character movement?<br>
+ </li>
+<li><code>Speed</code> - The base walking speed.</li>
+<li><code>Acceleration</code> - The acceleration amount.</li>
+<li><code>Deceleration</code> - The deceleration amount.<br>
+ </li>
+<li><code>Air Control</code> - Should we allow air control?</li>
+<li><code>Air Accelerate</code> - The air acceleration amount.<br>
+ </li>
+<li><code>Smart Strafing</code> - Should we allow smart strafing? (Similar to Source Engine strafing)</li>
+<li><code>Vertical Strafing</code> - Should we allow vertical strafing? (Z local axis)</li>
+<li><code>Horizontal Strafing</code> - Should we allow vertical strafing? (X local axis)</li>
+<li><code>Strafing Speed</code> - The strafing speed for horizontal and vertical strafing. (Smart strafing not included)</li>
+</ul>
+<h5 id="jump-settings">Jump Settings</h5>
+<ul>
+<li><code>Allow Jump</code> - Should we allow jumping?<br>
+ </li>
+<li><code>Auto jump</code> - Should we allow auto-jumping?</li>
+<li><code>Power</code> - The power of the jump.</li>
+</ul>
+<h5 id="sprint-settings">Sprint Settings</h5>
+<ul>
+<li><code>Allow Sprint</code> - Should we allow sprinting?<br>
+ </li>
+<li><code>Speed Multiplier</code> - The speed multiplier of the base speed when sprinting.</li>
+</ul>
+<h5 id="crouch-settings">Crouch Settings</h5>
+<ul>
+<li><code>Allow Crouch</code> - Should we allow crouching?<br>
+ </li>
+<li><code>Allow Crouch Jump</code> - Should we allow crouch-jumping?<br>
+ </li>
+<li><code>Crouch Height</code> - The height of the player when crouching.</li>
+<li><code>Crouch Camera Height</code> - The camera height of the player when crouching.<br>
+ </li>
+<li><code>Crouching Speed</code> - The speed of the crouching action.</li>
+<li><code>Speed Multiplier</code> - The speed multiplier of the base speed when crouching.</li>
+</ul>
+<h4 id="footstep-settings">Footstep Settings</h4>
+<ul>
+<li><code>Footstep Asset</code> - The footstep asset to use.<br>
+ </li>
+<li><code>Is 3D</code> - Are the footsteps generated in 3D spatial blending?</li>
+<li><code>Global Volume</code> - The global volume of the footsteps.</li>
+<li><code>Range</code> - The audio range of the footsteps. Roll-off will be linear. Any value equal or less than zero disables the range and uses default logarithmic roll-off. If “Is 3D” is disabled, then this value is ignored.</li>
+</ul>
+<h3 id="footstep-asset">3.2. Footstep Asset</h3>
+<p>You can create a <code>Footstep Asset</code> by right-clicking in the <code>Project</code> window, <code>Create 🡲 Footstep Asset</code>.</p>
+<p>There is also a <code>Footstep Asset</code> ready for use located at <code>Assets 🡲 MFPP 🡲 Sounds 🡲 Example Footsteps</code><br>
+&nbsp;</p><center><img src="https://i.imgur.com/P7mwDIM.png" alt=""></center><p></p>
+
+<ul>
+<li><code>Default Footsteps Name</code> - The default footsteps name that we select from the Footsteps list. <sub>(See <a href="#footstep-data">3.3. Footstep Data</a> for more information)</sub></li>
+<li><code>Footsteps</code> - The list of footsteps. <sub>(See <a href="#footstep-data">3.3. Footstep Data</a> for more information)</sub><br>
+ </li>
+<li><code>Walk Timer</code> - The walking timer interval. 1 = 1 second between footsteps, 0.5 = 0.5 seconds between footsteps and so on. Lower is faster.</li>
+<li><code>Crouch Timer Multiplier</code> - Interval multiplier for the walking timer when crouching. Higher than 1 slows it down (e.g 1.4 = 1.4x interval length), lower and it speeds it up.</li>
+<li><code>Sprint Timer Multiplier</code> - Interval multiplier for the walking timer when sprinting. Higher than 1 slows it down, lower and it speeds it up (e.g 0.6 = 0.6x interval length).<br>
+ </li>
+<li><code>Crouch Volume</code> - Footstep volume when crouching.</li>
+<li><code>Walk Volume</code> - Footstep volume when walking.</li>
+<li><code>Sprint Volume</code> - Footstep volume when sprinting.<br>
+ </li>
+<li><code>Landing Minimum Velocity</code> - The minimum landing velocity.</li>
+<li><code>Landing Maximum Velocity</code> - The maximum landing velocity.</li>
+<li><code>Landing Volume Multiplier</code> - The final volume multiplier of the landing sounds.<br>
+<sub>(Landing sound volume is calculated by interpolating from the minimum and maximum velocity we landed at.)</sub></li>
+</ul>
+<h3 id="footstep-data">3.3. Footstep Data</h3>
+<p>This is where you will add your footsteps, jumping and landing sounds, along with linking them to specific surfaces, materials &amp; textures.<br>
+&nbsp;</p><center><img src="https://i.imgur.com/JbYfCeH.png" alt=""></center><p></p>
+
+<ul>
+<li><code>Name</code> - The name of the footstep data.<br>
+ </li>
+<li><code>Linked Materials</code> - Linked materials for this footstep data.</li>
+<li><code>Linked Textures</code> - Linked textures for this footstep data.<br>
+<sub>(Example: Any material or texture you assign to this <code>Footstep Data</code> will retrieve the audio-clips assigned to the same <code>Footstep Data</code>)</sub><br>
+ </li>
+<li><code>Footstep Clips</code> - Footstep sounds.</li>
+<li><code>Jumping Clips</code> - Jumping sounds.</li>
+<li><code>Landing Clips</code> - Landing sounds.<br>
+ </li>
+<li><code>Min Pitch</code> - Minimum random pitch of a footstep.</li>
+<li><code>Max Pitch</code> - Maximum random pitch of a footstep.<br>
+<sub>(Leave both <code>Min Pitch</code> and <code>Max Pitch</code> to 1 if you do not want any random pitch)</sub></li>
+</ul>
+<h3 id="footstep-override">3.4. Footstep Override</h3>
+<p>You can override the footstep data to use on a collider with the <code>FootstepOverride</code> script, useful when you want to exceptionally change the footsteps used for a material or texture that is already used, or you just don’t have any mesh-renderers and only the collider to work with.<br>
+&nbsp;</p><center><img src="https://i.imgur.com/XwGOdJr.gif" alt=""><br>
+<sub>In this example, we link this game-object to use the “Wood” footstep data in our <code>FootstepAsset</code> assigned to our player, just make sure that you have a footstep data with an existing name in order for it to work.</sub></center><p></p>
+<h3 id="player-update-flow">3.5. Player update flow</h3>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-isk9KlLtteJkDZ6u" height="100%" viewBox="0 0 611.2999725341797 880.4499359130859" style="max-width:611.2999725341797px;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M114.10832977294922,66.71665954589844L114.10832977294922,91.71665954589844L114.10832977294922,116.71665954589844" marker-end="url(#arrowhead401)" style="fill:none"></path><defs><marker id="arrowhead401" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M114.10832977294922,163.43331909179688L114.10832977294922,188.43331909179688L114.10832977294922,213.43331909179688" marker-end="url(#arrowhead402)" style="fill:none"></path><defs><marker id="arrowhead402" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,66.71665954589844L414.75831604003906,91.71665954589844L414.75831604003906,116.71665954589844" marker-end="url(#arrowhead403)" style="fill:none"></path><defs><marker id="arrowhead403" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,163.43331909179688L414.75831604003906,188.43331909179688L414.75831604003906,213.43331909179688" marker-end="url(#arrowhead404)" style="fill:none"></path><defs><marker id="arrowhead404" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,260.1499786376953L414.75831604003906,285.1499786376953L414.75831604003906,310.1499786376953" marker-end="url(#arrowhead405)" style="fill:none"></path><defs><marker id="arrowhead405" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,356.86663818359375L414.75831604003906,381.86663818359375L414.75831604003906,406.86663818359375" marker-end="url(#arrowhead406)" style="fill:none"></path><defs><marker id="arrowhead406" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,453.5832977294922L414.75831604003906,478.5832977294922L414.75831604003906,503.5832977294922" marker-end="url(#arrowhead407)" style="fill:none"></path><defs><marker id="arrowhead407" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,550.2999572753906L414.75831604003906,575.2999572753906L414.75831604003906,600.2999572753906" marker-end="url(#arrowhead408)" style="fill:none"></path><defs><marker id="arrowhead408" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,647.0166168212891L414.75831604003906,672.0166168212891L414.75831604003906,697.0166168212891" marker-end="url(#arrowhead409)" style="fill:none"></path><defs><marker id="arrowhead409" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M414.75831604003906,743.7332763671875L414.75831604003906,768.7332763671875L414.75831604003906,793.7332763671875" marker-end="url(#arrowhead410)" style="fill:none"></path><defs><marker id="arrowhead410" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(114.10832977294922,43.35832977294922)"><rect rx="0" ry="0" x="-48.041664123535156" y="-23.35832977294922" width="96.08332824707031" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-38.041664123535156,-13.358329772949219)"><foreignObject width="76.08332824707031" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">void Start()</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(114.10832977294922,140.07498931884766)"><rect rx="0" ry="0" x="-76.19999694824219" y="-23.35832977294922" width="152.39999389648438" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-66.19999694824219,-13.358329772949219)"><foreignObject width="132.39999389648438" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Player initialization</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(114.10832977294922,236.7916488647461)"><rect rx="0" ry="0" x="-94.10832977294922" y="-23.35832977294922" width="188.21665954589844" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-84.10832977294922,-13.358329772949219)"><foreignObject width="168.21665954589844" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Initialize player modules</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(414.75831604003906,43.35832977294922)"><rect rx="0" ry="0" x="-57.05000305175781" y="-23.35832977294922" width="114.10000610351562" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-47.05000305175781,-13.358329772949219)"><foreignObject width="94.10000610351562" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">void Update()</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="E" transform="translate(414.75831604003906,140.07498931884766)"><rect rx="0" ry="0" x="-65.46666717529297" y="-23.35832977294922" width="130.93333435058594" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-55.46666717529297,-13.358329772949219)"><foreignObject width="110.93333435058594" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">BeforeUpdate();</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="F" transform="translate(414.75831604003906,236.7916488647461)"><rect rx="0" ry="0" x="-156.54165649414062" y="-23.35832977294922" width="313.08331298828125" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-146.54165649414062,-13.358329772949219)"><foreignObject width="293.08331298828125" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Call BeforeUpdate(); on all player modules</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="G" transform="translate(414.75831604003906,333.50830841064453)"><rect rx="0" ry="0" x="-50.775001525878906" y="-23.35832977294922" width="101.55000305175781" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40.775001525878906,-13.358329772949219)"><foreignObject width="81.55000305175781" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">DoMouse();</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="H" transform="translate(414.75831604003906,430.22496795654297)"><rect rx="0" ry="0" x="-64.84166717529297" y="-23.35832977294922" width="129.68333435058594" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-54.84166717529297,-13.358329772949219)"><foreignObject width="109.68333435058594" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">DoMovement();</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="I" transform="translate(414.75831604003906,526.9416275024414)"><rect rx="0" ry="0" x="-65.58333587646484" y="-23.35832977294922" width="131.1666717529297" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-55.583335876464844,-13.358329772949219)"><foreignObject width="111.16667175292969" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">UpdateHeight();</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="J" transform="translate(414.75831604003906,623.6582870483398)"><rect rx="0" ry="0" x="-61.32499694824219" y="-23.35832977294922" width="122.64999389648438" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-51.32499694824219,-13.358329772949219)"><foreignObject width="102.64999389648438" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">DoFootsteps();</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="K" transform="translate(414.75831604003906,720.3749465942383)"><rect rx="0" ry="0" x="-60.133331298828125" y="-23.35832977294922" width="120.26666259765625" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.133331298828125,-13.358329772949219)"><foreignObject width="100.26666259765625" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">AfterUpdate();</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="L" transform="translate(414.75831604003906,817.0916061401367)"><rect rx="0" ry="0" x="-150.94166564941406" y="-23.35832977294922" width="301.8833312988281" height="46.71665954589844"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-140.94166564941406,-13.358329772949219)"><foreignObject width="281.8833312988281" height="26.716659545898438"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Call AfterUpdate(); on all player modules</div></foreignObject></g></g></g></g></g></g></svg></div>
+<p><sub>(See <a href="#code-documentation">2.0. Code Documentation</a> for more information)</sub></p>
+<h2 id="player-modules">4. Player Modules</h2>
+<p>With Player modules you can extend the functionality of the <code>Player</code> script however you would like.</p>
+<h3 id="adding-a-module">4.1. Adding a module</h3>
+<p>Adding a module is easy and only requires adding the desired <code>Player Module</code> component in the game object where the <code>Player</code> script resides.<br>
+&nbsp;</p><center> <img src="https://i.imgur.com/XpQM7MQ.gif" alt=""></center><p></p>
+
+<p>Any class that inherits from the <code>PlayerModule</code> class is a valid module.</p>
+<h3 id="bob-module">4.2. Bob Module</h3>
+<p>Bobs the camera as we walk and land.</p>
+<ul>
+<li><code>Enabled</code> - Is this <code>PlayerModule</code> enabled?</li>
+<li><code>Execution Order</code> - The execution order of this <code>PlayerModule</code>, lower means earlier execution.<br>
+ </li>
+<li><code>Bob Amplitude</code> - The amplitude of the bobbing.</li>
+<li><code>Bob Speed</code> - The speed of the bobbing.<br>
+ </li>
+<li><code>Bob X</code> - The X axis animation curve of the bobbing.</li>
+<li><code>Bob Y</code> - The Y axis animation curve of the bobbing.<br>
+ </li>
+<li><code>Landing Bob Amplitude</code> - The amplitude of the landing bob.</li>
+<li><code>Landing Bob Speed</code> - The speed recover of the landing bob.</li>
+<li><code>Landing Bob Lerp Speed</code> - The speed recover <abbr title="Interpolation smoothing">lerp</abbr> (smoothing) of the landing bob.</li>
+</ul>
+<h3 id="pick-up-module">4.3. Pick Up Module</h3>
+<p>Pick up rigidbodies and carry them around.</p>
+<ul>
+<li><code>Enabled</code> - Is this <code>PlayerModule</code> enabled?</li>
+<li><code>Execution Order</code> - The execution order of this <code>PlayerModule</code>, lower means earlier execution.<br>
+ </li>
+<li><code>Max Pickup Distance</code> - The maximum pickup distance.</li>
+<li><code>Pick Up Button</code> - Pick up button.</li>
+</ul>
+<h3 id="rigidbody-push-module">4.4. Rigidbody Push Module</h3>
+<p>Pushes rigidbodies around as you attempt to walk through them.</p>
+<ul>
+<li><code>Enabled</code> - Is this <code>PlayerModule</code> enabled?</li>
+<li><code>Execution Order</code> - The execution order of this <code>PlayerModule</code>, lower means earlier execution.<br>
+ </li>
+<li><code>Push Force</code> - The pushing force.</li>
+</ul>
+<h3 id="ladder-module">4.5. Ladder Module</h3>
+<p>Allows you to climb on ladders.</p>
+<ul>
+<li><code>Enabled</code> - Is this <code>PlayerModule</code> enabled?</li>
+<li><code>Execution Order</code> - The execution order of this <code>PlayerModule</code>, lower means earlier execution.<br>
+ </li>
+<li><code>Ladder Layer Mask</code> - The layer mask of the ladder(s).</li>
+<li><code>Climb Speed</code> - The climb speed of the player on ladders.</li>
+<li><code>Climb Step Timer</code> - The step interval of the player on ladders.</li>
+</ul>
+<p>The ladder climbing sounds takes the material of the ladder you’re climbing (Or default footsteps if none found), if you want special ladder sounds, create a <code>Footstep Data</code> in your desired <code>Footstep Asset</code>, assign it a name like “Ladder” and add the desired sounds to it.</p>
+<p><sub>(Do not forget to create an appropriate layer, like “Ladder”, and apply this layer to ladder game objects. You will likely need to create that layer and reassign it to the game object and this ladder module for the Example scene.)</sub></p>
+<h3 id="creating-a-module">4.6. Creating a module</h3>
+<p>In order to create your own module, you will need to create a script. Right-click on the <code>Project</code> window, <code>Create 🡲 C# Script</code>.</p>
+<p>Go ahead and edit the script and change it all with the following:</p>
+<pre class=" language-csharp"><code class="prism  language-csharp"><span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MFPP<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NameOfYourModule</span> <span class="token punctuation">:</span> PlayerModule
+<span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This is the very base of a player module.</p>
+<p>The <code>PlayerModule</code> base class contains a few overridable methods such as:</p>
+<pre class=" language-csharp"><code class="prism  language-csharp"><span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">Initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// This is called whenever the player initializes all modules.</span>
+<span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">BeforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// This is called before the update of the player.</span>
+<span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">AfterUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// This is called after the update of the player.</span>
+</code></pre>
+<p>You can also register events from the player, into the module, events such as:</p>
+<pre class=" language-csharp"><code class="prism  language-csharp">Player<span class="token punctuation">.</span>OnAired             <span class="token comment">// Called when the player just aired.</span>
+Player<span class="token punctuation">.</span>OnLanded            <span class="token comment">// Called when the player just landed.</span>
+Player<span class="token punctuation">.</span>OnFootstep          <span class="token comment">// Called when the player just emitted a footstep.</span>
+Player<span class="token punctuation">.</span>BeforeFinalMovement <span class="token comment">// Called just before the final movement.</span>
+Player<span class="token punctuation">.</span>AfterFinalMovement  <span class="token comment">// Called just after the final movement.</span>
+Player<span class="token punctuation">.</span>CollisionDetected   <span class="token comment">// Called when a collision has been detected.</span>
+</code></pre>
+<p><sub>(For more information, check out <a href="#code-documentation">2. Code Documentation</a>)</sub></p>
+<p>Let’s make a fun module, like jumping very very high when you press <code>H</code>.<br>
+We want a jumping power in the inspector, so let’s add that first.</p>
+<pre class=" language-csharp"><code class="prism  language-csharp"><span class="token keyword">public</span> <span class="token keyword">float</span> JumpingPower <span class="token operator">=</span> <span class="token number">50f</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Then we want that whenever we press <code>H</code>, we apply an upwards force times the jumping power supplied, but only when we are grounded.</p>
+<pre class=" language-csharp"><code class="prism  language-csharp"><span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token keyword">void</span> <span class="token function">BeforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Run before the update of the player.</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Player<span class="token punctuation">.</span>IsGrounded <span class="token operator">&amp;&amp;</span> Input<span class="token punctuation">.</span><span class="token function">GetKeyDown</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>H<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// If grounded and we are pressing H.</span>
+    <span class="token punctuation">{</span>
+        Player<span class="token punctuation">.</span><span class="token function">EmitJumpSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Emit jumping sound.</span>
+        Player<span class="token punctuation">.</span><span class="token function">AddImpulse</span><span class="token punctuation">(</span>Vector3<span class="token punctuation">.</span>up <span class="token operator">*</span> JumpPower<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Add upwards jump impulse.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>You should end up with something like this:</p>
+<pre class=" language-csharp"><code class="prism  language-csharp"><span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MFPP<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HighJumpModule</span> <span class="token punctuation">:</span> PlayerModule
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">float</span> JumpPower <span class="token operator">=</span> <span class="token number">50f</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token keyword">void</span> <span class="token function">BeforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Run before the update of the player.</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Player<span class="token punctuation">.</span>IsGrounded <span class="token operator">&amp;&amp;</span> Input<span class="token punctuation">.</span><span class="token function">GetKeyDown</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>H<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// If grounded and we are pressing H.</span>
+        <span class="token punctuation">{</span>
+            Player<span class="token punctuation">.</span><span class="token function">EmitJumpSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Emit jumping sound.</span>
+            Player<span class="token punctuation">.</span><span class="token function">AddImpulse</span><span class="token punctuation">(</span>Vector3<span class="token punctuation">.</span>up <span class="token operator">*</span> JumpPower<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Add upwards jump impulse.</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>And there you go! If you try that out and press H, you should jump really really high if you left the <code>JumpPower</code> value to 50.</p>
+<p><sub>NOTE: Don’t forget to check if the module is enabled in any method registered to an <em><strong>event</strong></em> as events do not take into account the activation state of the module.</sub></p>
+<h2 id="troubleshooting--tips">5. Troubleshooting &amp; Tips</h2>
+<h3 id="the-player-goes-right-through-rigidbodies-sometimes">5.1. The Player goes right through rigidbodies sometimes</h3>
+<p>You have 4 different ways to fix this problem, you can:</p>
+<ul>
+<li>Increase the skin width of the <code>CharacterController</code> component in your player.</li>
+<li>Decrease the <code>Fixed Timestep</code> property in the Time window: <code>Edit 🡲 Project Settings 🡲 Time</code>.</li>
+<li>Increase the <code>Continuous Collision Detection Strength</code> property in the <code>Player</code> script.</li>
+<li>Increase the <code>Continuous Collision Detection Passes</code> property in the <code>Player</code> script.</li>
+</ul>
+<h3 id="changing-what-the-player-collides-with">5.2. Changing what the Player collides with</h3>
+<p>To change what the player collides with, it’s as simple as going to the Physics window and changing the collision matrix: <code>Edit 🡲 Project Settings 🡲 Physics</code><br>
+&nbsp;</p><center><img src="https://i.imgur.com/4Hq66og.png" alt=""></center><p></p>
+
+<h3 id="my-footsteps-doesnt-work">5.3 My footsteps doesn’t work</h3>
+<p>Make sure that you have done the following:</p>
+<ul>
+<li>A <code>MeshRenderer</code> or <code>Terrain</code> is attached to the collider you’re walking on.</li>
+<li>An appropriate footstep data linked to the material or texture you’re walking on.</li>
+<li>If the material or texture isn’t registered anywhere in the footstep asset, make sure your default footstep name actually exists.</li>
+</ul>
+<p><sub>(See <a href="#footstep-asset">3.2. Footstep Asset</a> and <a href="#footstep-data">3.3. Footstep Data</a> for more information)</sub></p>
+<h2 id="contact">6. Contact</h2>
+<p>If you have any questions, feedback, suggestions or problems with <strong><abbr title="Modular First Person Player">MFPP</abbr></strong>, you can contact me at <a href="mailto:AshkoreD@gmail.com"><strong>AshkoreD@gmail.com</strong></a></p>
+
+    </div>
+  </div>
+</body>
+
+</html>
