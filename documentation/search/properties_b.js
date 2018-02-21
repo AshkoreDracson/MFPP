@@ -2,6 +2,7 @@ var searchData=
 [
   ['main',['Main',['../class_m_f_p_p_1_1_player.html#ac4e992f8ff2dba10b2821499df8314f5',1,'MFPP::Player']]],
   ['maxpitch',['MaxPitch',['../class_m_f_p_p_1_1_footstep_asset_1_1_data.html#ae5778963e464daee02753ffa5947e865',1,'MFPP::FootstepAsset::Data']]],
+  ['minmovedistance',['MinMoveDistance',['../class_m_f_p_p_1_1_player.html#ad270aa5b4eed66f8e0e26369a2dc7872',1,'MFPP::Player']]],
   ['minpitch',['MinPitch',['../class_m_f_p_p_1_1_footstep_asset_1_1_data.html#a5624017d7f8f9f7e88ef84acde5a4de7',1,'MFPP::FootstepAsset::Data']]],
   ['modules',['Modules',['../class_m_f_p_p_1_1_player.html#a5de80a758b50b81d5c0b2e8f17223591',1,'MFPP::Player']]],
   ['mouselocked',['MouseLocked',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a7b6ff093708b0b5ef6711e55dcbbb811',1,'MFPP::Player::ControlSettings']]],

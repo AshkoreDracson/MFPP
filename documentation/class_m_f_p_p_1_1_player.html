@@ -167,6 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70338eb6b59d31539e660d6c2b489a46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a70338eb6b59d31539e660d6c2b489a46">AddImpulse</a> (Vector3 impulse)</td></tr>
 <tr class="memdesc:a70338eb6b59d31539e660d6c2b489a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an impulse to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#a70338eb6b59d31539e660d6c2b489a46">More...</a><br /></td></tr>
 <tr class="separator:a70338eb6b59d31539e660d6c2b489a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c22b4cfa9fab643727e260588247347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a4c22b4cfa9fab643727e260588247347">TeleportTo</a> (Vector3 position, bool resetVelocity=true)</td></tr>
+<tr class="memdesc:a4c22b4cfa9fab643727e260588247347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the player to a specified position.  <a href="#a4c22b4cfa9fab643727e260588247347">More...</a><br /></td></tr>
+<tr class="separator:a4c22b4cfa9fab643727e260588247347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a4be2befe3a513e6f2761fdab1e2490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a3a4be2befe3a513e6f2761fdab1e2490">EmitFootstepSound</a> ()</td></tr>
 <tr class="memdesc:a3a4be2befe3a513e6f2761fdab1e2490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits a footstep sound.  <a href="#a3a4be2befe3a513e6f2761fdab1e2490">More...</a><br /></td></tr>
 <tr class="separator:a3a4be2befe3a513e6f2761fdab1e2490"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,6 +218,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:abb11ac3908c51773517cba039be1deab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#abb11ac3908c51773517cba039be1deab">GetButtonUp</a> (string buttonName)</td></tr>
 <tr class="memdesc:abb11ac3908c51773517cba039be1deab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to Input.GetButtonUp(string) but also taking into account <a class="el" href="class_m_f_p_p_1_1_player_1_1_control_settings.html#add9d7aed17582754883a77644bf4cce7" title="Are input controls enabled? ">ControlSettings.ControlsEnabled</a>.  <a href="#abb11ac3908c51773517cba039be1deab">More...</a><br /></td></tr>
 <tr class="separator:abb11ac3908c51773517cba039be1deab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98b0fb84581641e72477e679b57dd86"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#ae98b0fb84581641e72477e679b57dd86">AirAccelerate</a> (Vector3 wishDir, Vector3 velocity, float accelerate)</td></tr>
+<tr class="memdesc:ae98b0fb84581641e72477e679b57dd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies air accelerate for a certain wished direction and the current velocity we're going at.  <a href="#ae98b0fb84581641e72477e679b57dd86">More...</a><br /></td></tr>
+<tr class="separator:ae98b0fb84581641e72477e679b57dd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -239,6 +245,24 @@ Properties</h2></td></tr>
 <tr class="memitem:a81bafe7b945f2bbd00430856a03c39a2"><td class="memItemLeft" align="right" valign="top">CharacterController&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2">CharacterController</a><code> [get]</code></td></tr>
 <tr class="memdesc:a81bafe7b945f2bbd00430856a03c39a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#a81bafe7b945f2bbd00430856a03c39a2">More...</a><br /></td></tr>
 <tr class="separator:a81bafe7b945f2bbd00430856a03c39a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad270aa5b4eed66f8e0e26369a2dc7872"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#ad270aa5b4eed66f8e0e26369a2dc7872">MinMoveDistance</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad270aa5b4eed66f8e0e26369a2dc7872"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum move distance of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.minMoveDistance  <a href="#ad270aa5b4eed66f8e0e26369a2dc7872">More...</a><br /></td></tr>
+<tr class="separator:ad270aa5b4eed66f8e0e26369a2dc7872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b13115207f4f4e0faede0c3cc43de90"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a0b13115207f4f4e0faede0c3cc43de90">Radius</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0b13115207f4f4e0faede0c3cc43de90"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.radius  <a href="#a0b13115207f4f4e0faede0c3cc43de90">More...</a><br /></td></tr>
+<tr class="separator:a0b13115207f4f4e0faede0c3cc43de90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45d3dcd8238189672f162aeed84382f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#af45d3dcd8238189672f162aeed84382f">RadiusWithSkinWidth</a><code> [get]</code></td></tr>
+<tr class="memdesc:af45d3dcd8238189672f162aeed84382f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius combined with the skin width of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>  <a href="#af45d3dcd8238189672f162aeed84382f">More...</a><br /></td></tr>
+<tr class="separator:af45d3dcd8238189672f162aeed84382f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99c29dd604724a9b3192dd5fc716620"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#ac99c29dd604724a9b3192dd5fc716620">SkinWidth</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ac99c29dd604724a9b3192dd5fc716620"><td class="mdescLeft">&#160;</td><td class="mdescRight">The skin width of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.skinWidth  <a href="#ac99c29dd604724a9b3192dd5fc716620">More...</a><br /></td></tr>
+<tr class="separator:ac99c29dd604724a9b3192dd5fc716620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ee1b536c5cc2e8dc85ed78d8a47a05"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#ab6ee1b536c5cc2e8dc85ed78d8a47a05">SlopeLimit</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ab6ee1b536c5cc2e8dc85ed78d8a47a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">The slope limit in degrees of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.slopeLimit  <a href="#ab6ee1b536c5cc2e8dc85ed78d8a47a05">More...</a><br /></td></tr>
+<tr class="separator:ab6ee1b536c5cc2e8dc85ed78d8a47a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096b716e9fc40a540cd609b8d4e295b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a096b716e9fc40a540cd609b8d4e295b8">StepOffset</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a096b716e9fc40a540cd609b8d4e295b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The step offset in meters of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.stepOffset  <a href="#a096b716e9fc40a540cd609b8d4e295b8">More...</a><br /></td></tr>
+<tr class="separator:a096b716e9fc40a540cd609b8d4e295b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82de5ddd299000da4d7f27b940f7a854"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a82de5ddd299000da4d7f27b940f7a854">LookAngles</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a82de5ddd299000da4d7f27b940f7a854"><td class="mdescLeft">&#160;</td><td class="mdescRight">The look angles of the <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#a82de5ddd299000da4d7f27b940f7a854">More...</a><br /></td></tr>
 <tr class="separator:a82de5ddd299000da4d7f27b940f7a854"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,13 +288,13 @@ Properties</h2></td></tr>
 <tr class="memdesc:ab26c1704cec040f4d1905df2fdb39955"><td class="mdescLeft">&#160;</td><td class="mdescRight">The final movement of the <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a> when calling UnityEngine.CharacterController.Move(Vector3)  <a href="#ab26c1704cec040f4d1905df2fdb39955">More...</a><br /></td></tr>
 <tr class="separator:ab26c1704cec040f4d1905df2fdb39955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a752c3fa1ec5a63b754c9ec13199983f0"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a752c3fa1ec5a63b754c9ec13199983f0">Velocity</a><code> [get]</code></td></tr>
-<tr class="memdesc:a752c3fa1ec5a63b754c9ec13199983f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The velocity of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. Does not include additional speeds like kinematic movement.  <a href="#a752c3fa1ec5a63b754c9ec13199983f0">More...</a><br /></td></tr>
+<tr class="memdesc:a752c3fa1ec5a63b754c9ec13199983f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The velocity of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>. Does not include additional speeds like kinematic movement.  <a href="#a752c3fa1ec5a63b754c9ec13199983f0">More...</a><br /></td></tr>
 <tr class="separator:a752c3fa1ec5a63b754c9ec13199983f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a924b8f73a8f65ca113fc7e780e57df11"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a924b8f73a8f65ca113fc7e780e57df11">PlanarVelocity</a><code> [get]</code></td></tr>
-<tr class="memdesc:a924b8f73a8f65ca113fc7e780e57df11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The planar velocity (X and Z only) of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. Does not include additional speeds like kinematic movement.  <a href="#a924b8f73a8f65ca113fc7e780e57df11">More...</a><br /></td></tr>
+<tr class="memdesc:a924b8f73a8f65ca113fc7e780e57df11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The planar velocity (X and Z only) of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>. Does not include additional speeds like kinematic movement.  <a href="#a924b8f73a8f65ca113fc7e780e57df11">More...</a><br /></td></tr>
 <tr class="separator:a924b8f73a8f65ca113fc7e780e57df11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadb182bb876efd36a45565055699d60f"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#aadb182bb876efd36a45565055699d60f">TotalVelocity</a><code> [get, protected set]</code></td></tr>
-<tr class="memdesc:aadb182bb876efd36a45565055699d60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total velocity of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>, kinematic movement included.  <a href="#aadb182bb876efd36a45565055699d60f">More...</a><br /></td></tr>
+<tr class="memdesc:aadb182bb876efd36a45565055699d60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total velocity of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, kinematic movement included.  <a href="#aadb182bb876efd36a45565055699d60f">More...</a><br /></td></tr>
 <tr class="separator:aadb182bb876efd36a45565055699d60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3f1c5583cc827c22dad083472c944dd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#af3f1c5583cc827c22dad083472c944dd">TargetSpeed</a><code> [get]</code></td></tr>
 <tr class="memdesc:af3f1c5583cc827c22dad083472c944dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target speed magnitude of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#af3f1c5583cc827c22dad083472c944dd">More...</a><br /></td></tr>
@@ -318,7 +342,7 @@ Properties</h2></td></tr>
 <tr class="memdesc:a112013dadc6075512825628ecb2feb28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a> descending? (Excluding kinematic movement)  <a href="#a112013dadc6075512825628ecb2feb28">More...</a><br /></td></tr>
 <tr class="separator:a112013dadc6075512825628ecb2feb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae5b81a4427adb5104b6e2512433d30"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#acae5b81a4427adb5104b6e2512433d30">SlopeRadiusMultiplier</a><code> [get]</code></td></tr>
-<tr class="memdesc:acae5b81a4427adb5104b6e2512433d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius multiplier of the slope limit of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#acae5b81a4427adb5104b6e2512433d30">More...</a><br /></td></tr>
+<tr class="memdesc:acae5b81a4427adb5104b6e2512433d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius multiplier of the slope limit of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>.  <a href="#acae5b81a4427adb5104b6e2512433d30">More...</a><br /></td></tr>
 <tr class="separator:acae5b81a4427adb5104b6e2512433d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0298effd54719b7a55b081eae150714"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_m_f_p_p_1_1_footstep_asset_1_1_data.html">FootstepAsset.Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#ad0298effd54719b7a55b081eae150714">CurrentFootstepData</a><code> [get]</code></td></tr>
 <tr class="memdesc:ad0298effd54719b7a55b081eae150714"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current footstep data activated based on the Material or Texture we're standing on.  <a href="#ad0298effd54719b7a55b081eae150714">More...</a><br /></td></tr>
@@ -342,8 +366,11 @@ Properties</h2></td></tr>
 <tr class="memdesc:ae2abfc73762295ce5c445015f69ac51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current camera height of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#ae2abfc73762295ce5c445015f69ac51c">More...</a><br /></td></tr>
 <tr class="separator:ae2abfc73762295ce5c445015f69ac51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1822b4c722da3d5f646c673588c82ea"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#aa1822b4c722da3d5f646c673588c82ea">CurrentSpeedMultiplier</a><code> [get, protected set]</code></td></tr>
-<tr class="memdesc:aa1822b4c722da3d5f646c673588c82ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current speed multiplier of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#aa1822b4c722da3d5f646c673588c82ea">More...</a><br /></td></tr>
+<tr class="memdesc:aa1822b4c722da3d5f646c673588c82ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current speed multiplier of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a> (<a class="el" href="class_m_f_p_p_1_1_player.html#a745c94392d578402a1cf577bb6ada98a" title="The current slope speed multiplier of this Player. ">CurrentSlopeSpeedMultiplier</a> not included).  <a href="#aa1822b4c722da3d5f646c673588c82ea">More...</a><br /></td></tr>
 <tr class="separator:aa1822b4c722da3d5f646c673588c82ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745c94392d578402a1cf577bb6ada98a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a745c94392d578402a1cf577bb6ada98a">CurrentSlopeSpeedMultiplier</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a745c94392d578402a1cf577bb6ada98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current slope speed multiplier of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>.  <a href="#a745c94392d578402a1cf577bb6ada98a">More...</a><br /></td></tr>
+<tr class="separator:a745c94392d578402a1cf577bb6ada98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a657bd9900d186878be44804933b351f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player.html#a657bd9900d186878be44804933b351f8">CollisionLayers</a><code> [get]</code></td></tr>
 <tr class="memdesc:a657bd9900d186878be44804933b351f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collision layers that this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a> collides into, see Physics window to change collision layers.  <a href="#a657bd9900d186878be44804933b351f8">More...</a><br /></td></tr>
 <tr class="separator:a657bd9900d186878be44804933b351f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -482,6 +509,57 @@ Events</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Executed after the Update. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae98b0fb84581641e72477e679b57dd86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MFPP.Player.AirAccelerate </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>wishDir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>accelerate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies air accelerate for a certain wished direction and the current velocity we're going at. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wishDir</td><td>The wished direction.</td></tr>
+    <tr><td class="paramname">velocity</td><td>The current velocity.</td></tr>
+    <tr><td class="paramname">accelerate</td><td>The accelerate amount we want to apply.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corrected air accelerated velocity.</dd></dl>
 
 </div>
 </div>
@@ -972,6 +1050,41 @@ Events</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a4c22b4cfa9fab643727e260588247347"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MFPP.Player.TeleportTo </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>resetVelocity</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teleports the player to a specified position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position.</td></tr>
+    <tr><td class="paramname">resetVelocity</td><td>Should we reset the velocity of the player?</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="acc8f662f55aa1669753ebc8599dc8ce4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1196,6 +1309,28 @@ Events</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a745c94392d578402a1cf577bb6ada98a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.CurrentSlopeSpeedMultiplier</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current slope speed multiplier of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="aa1822b4c722da3d5f646c673588c82ea"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1214,7 +1349,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The current speed multiplier of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. </p>
+<p>The current speed multiplier of this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a> (<a class="el" href="class_m_f_p_p_1_1_player.html#a745c94392d578402a1cf577bb6ada98a" title="The current slope speed multiplier of this Player. ">CurrentSlopeSpeedMultiplier</a> not included). </p>
 
 </div>
 </div>
@@ -1724,6 +1859,28 @@ Events</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad270aa5b4eed66f8e0e26369a2dc7872"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.MinMoveDistance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The minimum move distance of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.minMoveDistance </p>
+
+</div>
+</div>
 <a class="anchor" id="a5de80a758b50b81d5c0b2e8f17223591"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1940,7 +2097,95 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The planar velocity (X and Z only) of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. Does not include additional speeds like kinematic movement. </p>
+<p>The planar velocity (X and Z only) of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>. Does not include additional speeds like kinematic movement. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0b13115207f4f4e0faede0c3cc43de90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.Radius</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The radius of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.radius </p>
+
+</div>
+</div>
+<a class="anchor" id="af45d3dcd8238189672f162aeed84382f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.RadiusWithSkinWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The radius combined with the skin width of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="ac99c29dd604724a9b3192dd5fc716620"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.SkinWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The skin width of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.skinWidth </p>
+
+</div>
+</div>
+<a class="anchor" id="ab6ee1b536c5cc2e8dc85ed78d8a47a05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.SlopeLimit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The slope limit in degrees of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.slopeLimit </p>
 
 </div>
 </div>
@@ -1962,7 +2207,29 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The radius multiplier of the slope limit of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. </p>
+<p>The radius multiplier of the slope limit of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a096b716e9fc40a540cd609b8d4e295b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Player.StepOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The step offset in meters of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, same as UnityEngine.CharacterController.stepOffset </p>
 
 </div>
 </div>
@@ -2028,7 +2295,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The total velocity of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>, kinematic movement included. </p>
+<p>The total velocity of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>, kinematic movement included. </p>
 
 </div>
 </div>
@@ -2050,7 +2317,7 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The velocity of the attached UnityEngine.CharacterController to this <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a>. Does not include additional speeds like kinematic movement. </p>
+<p>The velocity of this <a class="el" href="class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2" title="The attached UnityEngine.CharacterController to this Player. ">CharacterController</a>. Does not include additional speeds like kinematic movement. </p>
 
 </div>
 </div>

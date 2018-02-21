@@ -23,5 +23,6 @@ var searchData=
   ['currentfootstepdata',['CurrentFootstepData',['../class_m_f_p_p_1_1_player.html#ad0298effd54719b7a55b081eae150714',1,'MFPP::Player']]],
   ['currentheight',['CurrentHeight',['../class_m_f_p_p_1_1_player.html#a38c1be1235fc591ea4d612e37d10186c',1,'MFPP::Player']]],
   ['currentladdercollider',['CurrentLadderCollider',['../class_m_f_p_p_1_1_modules_1_1_ladder_module.html#ad7d5dd6e3a1f6bf414338c61199695ff',1,'MFPP::Modules::LadderModule']]],
+  ['currentslopespeedmultiplier',['CurrentSlopeSpeedMultiplier',['../class_m_f_p_p_1_1_player.html#a745c94392d578402a1cf577bb6ada98a',1,'MFPP::Player']]],
   ['currentspeedmultiplier',['CurrentSpeedMultiplier',['../class_m_f_p_p_1_1_player.html#aa1822b4c722da3d5f646c673588c82ea',1,'MFPP::Player']]]
 ];

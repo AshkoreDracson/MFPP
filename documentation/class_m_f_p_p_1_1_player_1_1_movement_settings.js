@@ -13,6 +13,7 @@ var class_m_f_p_p_1_1_player_1_1_movement_settings =
     [ "Deceleration", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#abf4adf07d9122b69f9685511edaf4bde", null ],
     [ "HorizontalStrafing", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a981fc5ee2c3c0cbe9da5ff0c770b6d11", null ],
     [ "Jump", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#ad9d8b96878f2fd56e268242bef2297a3", null ],
+    [ "SlopeSpeedMultiplierCurve", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a7db8f733915540c8918ae3a8ae3d5709", null ],
     [ "SmartStrafing", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a5a8b90dc794a5ac99250fef25a6902ce", null ],
     [ "Speed", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a4cbebc556de76eae1f3bf601b5c15203", null ],
     [ "Sprint", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a560753877aef32c63e35c14bfee3088a", null ],
