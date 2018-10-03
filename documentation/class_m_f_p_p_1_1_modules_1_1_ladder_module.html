@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Small Icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Modular First Person Player
-   &#160;<span id="projectnumber">1.0.0.1</span>
+   &#160;<span id="projectnumber">1.0.1.0</span>
    </div>
   </td>
  </tr>
@@ -145,12 +145,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1c88cf3fbda0ea893e575999d0529a67"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_modules_1_1_ladder_module.html#a1c88cf3fbda0ea893e575999d0529a67">ClimbStepTimer</a> = 1f</td></tr>
 <tr class="memdesc:a1c88cf3fbda0ea893e575999d0529a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The step interval of the <a class="el" href="class_m_f_p_p_1_1_player.html">Player</a> on ladders.  <a href="#a1c88cf3fbda0ea893e575999d0529a67">More...</a><br /></td></tr>
 <tr class="separator:a1c88cf3fbda0ea893e575999d0529a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fb49924d10b6086eeacd7971cbd28d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_modules_1_1_ladder_module.html#a36fb49924d10b6086eeacd7971cbd28d">GrabForceMultiplier</a> = 5f</td></tr>
+<tr class="memdesc:a36fb49924d10b6086eeacd7971cbd28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The grab force multiplier when grabbing a ladder.  <a href="#a36fb49924d10b6086eeacd7971cbd28d">More...</a><br /></td></tr>
+<tr class="separator:a36fb49924d10b6086eeacd7971cbd28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca535d6cb23755689b5fd8966b7fc28"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_modules_1_1_ladder_module.html#adca535d6cb23755689b5fd8966b7fc28">GrabDuration</a> = 0.5f</td></tr>
+<tr class="memdesc:adca535d6cb23755689b5fd8966b7fc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">The grab duration in seconds (until we grab a ladder).  <a href="#adca535d6cb23755689b5fd8966b7fc28">More...</a><br /></td></tr>
+<tr class="separator:adca535d6cb23755689b5fd8966b7fc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a2b8f416ba51e35775dc42d7311a39204"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_modules_1_1_ladder_module.html#a2b8f416ba51e35775dc42d7311a39204">OnLadder</a><code> [get, protected set]</code></td></tr>
 <tr class="memdesc:a2b8f416ba51e35775dc42d7311a39204"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the player is using a ladder.  <a href="#a2b8f416ba51e35775dc42d7311a39204">More...</a><br /></td></tr>
 <tr class="separator:a2b8f416ba51e35775dc42d7311a39204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd8fe3b28a643ac3a4f68c0068d2117"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_modules_1_1_ladder_module.html#a7bd8fe3b28a643ac3a4f68c0068d2117">OnTopOfLadder</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a7bd8fe3b28a643ac3a4f68c0068d2117"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the player is on top of a ladder.  <a href="#a7bd8fe3b28a643ac3a4f68c0068d2117">More...</a><br /></td></tr>
+<tr class="separator:a7bd8fe3b28a643ac3a4f68c0068d2117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7d5dd6e3a1f6bf414338c61199695ff"><td class="memItemLeft" align="right" valign="top">Collider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_modules_1_1_ladder_module.html#ad7d5dd6e3a1f6bf414338c61199695ff">CurrentLadderCollider</a><code> [get, protected set]</code></td></tr>
 <tr class="memdesc:ad7d5dd6e3a1f6bf414338c61199695ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current ladder we are colliding and using.  <a href="#ad7d5dd6e3a1f6bf414338c61199695ff">More...</a><br /></td></tr>
 <tr class="separator:ad7d5dd6e3a1f6bf414338c61199695ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +300,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adca535d6cb23755689b5fd8966b7fc28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Modules.LadderModule.GrabDuration = 0.5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The grab duration in seconds (until we grab a ladder). </p>
+
+</div>
+</div>
+<a class="anchor" id="a36fb49924d10b6086eeacd7971cbd28d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MFPP.Modules.LadderModule.GrabForceMultiplier = 5f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The grab force multiplier when grabbing a ladder. </p>
+
+</div>
+</div>
 <a class="anchor" id="a4038a2bdaff18155eef51923c7a17124"></a>
 <div class="memitem">
 <div class="memproto">
@@ -347,6 +384,28 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>True if the player is using a ladder. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7bd8fe3b28a643ac3a4f68c0068d2117"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MFPP.Modules.LadderModule.OnTopOfLadder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if the player is on top of a ladder. </p>
 
 </div>
 </div>
