@@ -1,7 +1,9 @@
 var searchData=
 [
   ['camera',['Camera',['../class_m_f_p_p_1_1_player_module.html#a4128caad25da12f7a74488e5b2fe440b',1,'MFPP.PlayerModule.Camera()'],['../class_m_f_p_p_1_1_player_1_1_main_settings.html#a91b189043e5f480a8d7e7e206cbf590f',1,'MFPP.Player.MainSettings.Camera()']]],
+  ['cameraextras',['CameraExtras',['../class_m_f_p_p_1_1_player.html#a992e1bcae33e6f0ffab5c2ed9b3ae012',1,'MFPP::Player']]],
   ['cameraheight',['CameraHeight',['../class_m_f_p_p_1_1_player_1_1_main_settings.html#a0d8dc5916f73fb87d4ae205f5ce781a5',1,'MFPP::Player::MainSettings']]],
+  ['camerasettings',['CameraSettings',['../class_m_f_p_p_1_1_player_1_1_camera_settings.html',1,'MFPP::Player']]],
   ['charactercontroller',['CharacterController',['../class_m_f_p_p_1_1_player.html#a81bafe7b945f2bbd00430856a03c39a2',1,'MFPP::Player']]],
   ['climbspeed',['ClimbSpeed',['../class_m_f_p_p_1_1_modules_1_1_ladder_module.html#a65cabdf45876ba2d6abad24ebd94df70',1,'MFPP::Modules::LadderModule']]],
   ['climbsteptimer',['ClimbStepTimer',['../class_m_f_p_p_1_1_modules_1_1_ladder_module.html#a1c88cf3fbda0ea893e575999d0529a67',1,'MFPP::Modules::LadderModule']]],
@@ -26,6 +28,9 @@ var searchData=
   ['crouchingspeed',['CrouchingSpeed',['../class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a08766435eb64c3bbcdf8992dfd3c55fb',1,'MFPP::Player::MovementSettings::CrouchSettings']]],
   ['crouchsettings',['CrouchSettings',['../class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html',1,'MFPP::Player::MovementSettings']]],
   ['crouchtimermultiplier',['CrouchTimerMultiplier',['../class_m_f_p_p_1_1_footstep_asset.html#ae33263aa5648b8a73380ab9226551887',1,'MFPP::FootstepAsset']]],
+  ['crouchtoggle',['CrouchToggle',['../class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a1e2d0de0546ad5f682be9a61fcc3cb7b',1,'MFPP::Player::MovementSettings::CrouchSettings']]],
+  ['crouchtogglebutton',['CrouchToggleButton',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a15f3538a6376c6230faa3b7cde217438',1,'MFPP::Player::ControlSettings']]],
+  ['crouchtoggled',['CrouchToggled',['../class_m_f_p_p_1_1_player.html#a9cbcf1d44a20ef85c3e28ab59ee4cd05',1,'MFPP::Player']]],
   ['crouchvolume',['CrouchVolume',['../class_m_f_p_p_1_1_footstep_asset.html#a1f9b4821f58e8caab5189ede7a06f094',1,'MFPP::FootstepAsset']]],
   ['currentcameraheight',['CurrentCameraHeight',['../class_m_f_p_p_1_1_player.html#ae2abfc73762295ce5c445015f69ac51c',1,'MFPP::Player']]],
   ['currentfootstepdata',['CurrentFootstepData',['../class_m_f_p_p_1_1_player.html#ad0298effd54719b7a55b081eae150714',1,'MFPP::Player']]],

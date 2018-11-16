@@ -25,6 +25,7 @@ var hierarchy =
       [ "MFPP.FootstepAsset", "class_m_f_p_p_1_1_footstep_asset.html", null ]
     ] ],
     [ "MFPP.Player.Settings", "class_m_f_p_p_1_1_player_1_1_settings.html", [
+      [ "MFPP.Player.CameraSettings", "class_m_f_p_p_1_1_player_1_1_camera_settings.html", null ],
       [ "MFPP.Player.CollisionSettings", "class_m_f_p_p_1_1_player_1_1_collision_settings.html", null ],
       [ "MFPP.Player.ControlSettings", "class_m_f_p_p_1_1_player_1_1_control_settings.html", null ],
       [ "MFPP.Player.FootstepSettings", "class_m_f_p_p_1_1_player_1_1_footstep_settings.html", null ],

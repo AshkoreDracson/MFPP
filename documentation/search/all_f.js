@@ -2,6 +2,7 @@ var searchData=
 [
   ['pickupbutton',['PickUpButton',['../class_m_f_p_p_1_1_modules_1_1_pick_up_module.html#ab30717887e1dae81cf234eeae7edafac',1,'MFPP::Modules::PickUpModule']]],
   ['pickupmodule',['PickUpModule',['../class_m_f_p_p_1_1_modules_1_1_pick_up_module.html',1,'MFPP::Modules']]],
+  ['pitchoffsetcurve',['PitchOffsetCurve',['../class_m_f_p_p_1_1_player_1_1_camera_settings.html#ad6cd6352aef4b9be966a8bb18aec48c6',1,'MFPP::Player::CameraSettings']]],
   ['planarvelocity',['PlanarVelocity',['../class_m_f_p_p_1_1_player.html#a924b8f73a8f65ca113fc7e780e57df11',1,'MFPP::Player']]],
   ['platform',['Platform',['../class_m_f_p_p_1_1_platform.html',1,'MFPP']]],
   ['play',['Play',['../class_m_f_p_p_1_1_audio.html#a4810d4bdc8dd31901624aff286f71020',1,'MFPP.Audio.Play(AudioClip clip)'],['../class_m_f_p_p_1_1_audio.html#a9936e48d393d86a3325822ebdeeeeb2e',1,'MFPP.Audio.Play(AudioClip clip, float volume)'],['../class_m_f_p_p_1_1_audio.html#ab544b4838936876be3e03f5cb637928a',1,'MFPP.Audio.Play(AudioClip clip, float volume, float pitch)']]],

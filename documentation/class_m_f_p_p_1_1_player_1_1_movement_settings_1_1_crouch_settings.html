@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Small Icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Modular First Person Player
-   &#160;<span id="projectnumber">1.0.1.0</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('class_m_f_p_p_1_1_player_1_1_movement_
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings-members.html">List of all members</a>  </div>
@@ -117,6 +118,14 @@ $(document).ready(function(){initNavTree('class_m_f_p_p_1_1_player_1_1_movement_
 
 <p>Inherits <a class="el" href="class_m_f_p_p_1_1_player_1_1_settings.html">MFPP.Player.Settings</a>.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a71943855e1e0bd0d85b8751a35acd6ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71943855e1e0bd0d85b8751a35acd6ee"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CrouchToggleOption</b> : byte { <b>CrouchHoldOnly</b>, 
+<b>CrouchToggleOnly</b>, 
+<b>Both</b>
+ }</td></tr>
+<tr class="separator:a71943855e1e0bd0d85b8751a35acd6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afeda8c73e94845777a7642800826ff19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeda8c73e94845777a7642800826ff19"></a>
@@ -135,6 +144,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a7246cb74eeec772444d5db3b9838a92f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a7246cb74eeec772444d5db3b9838a92f">AllowCrouchJump</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a7246cb74eeec772444d5db3b9838a92f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should we allow crouch-jumping?  <a href="#a7246cb74eeec772444d5db3b9838a92f">More...</a><br /></td></tr>
 <tr class="separator:a7246cb74eeec772444d5db3b9838a92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2d0de0546ad5f682be9a61fcc3cb7b"><td class="memItemLeft" align="right" valign="top">CrouchToggleOption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a1e2d0de0546ad5f682be9a61fcc3cb7b">CrouchToggle</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1e2d0de0546ad5f682be9a61fcc3cb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crouch toggling mode (by default Crouch Hold Only).  <a href="#a1e2d0de0546ad5f682be9a61fcc3cb7b">More...</a><br /></td></tr>
+<tr class="separator:a1e2d0de0546ad5f682be9a61fcc3cb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a059d2a9052d42fd2b66eaf666d8563ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a059d2a9052d42fd2b66eaf666d8563ae">CrouchHeight</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a059d2a9052d42fd2b66eaf666d8563ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the player when crouching.  <a href="#a059d2a9052d42fd2b66eaf666d8563ae">More...</a><br /></td></tr>
 <tr class="separator:a059d2a9052d42fd2b66eaf666d8563ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,6 +272,28 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The speed of the crouching action. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1e2d0de0546ad5f682be9a61fcc3cb7b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CrouchToggleOption MFPP.Player.MovementSettings.CrouchSettings.CrouchToggle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Crouch toggling mode (by default Crouch Hold Only). </p>
 
 </div>
 </div>
