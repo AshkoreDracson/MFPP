@@ -63,6 +63,7 @@ var class_m_f_p_p_1_1_player =
     [ "IsMoving", "class_m_f_p_p_1_1_player.html#a1f07bae2adf69bdaa1bc220eabcc6c01", null ],
     [ "IsSprinting", "class_m_f_p_p_1_1_player.html#ab715a97db288033dc93ad8a34f918441", null ],
     [ "IsStepOffsetting", "class_m_f_p_p_1_1_player.html#ac75c0586ce4d6b25c1826385b1682c33", null ],
+    [ "Jumped", "class_m_f_p_p_1_1_player.html#a8376eeab2923a22ef14d3fedacbfadf6", null ],
     [ "JustAired", "class_m_f_p_p_1_1_player.html#a1c254488942dad5b56963d894b3e658c", null ],
     [ "JustLanded", "class_m_f_p_p_1_1_player.html#ac783834fcc95aace77f03d49aa3dbbd3", null ],
     [ "KinematicAngles", "class_m_f_p_p_1_1_player.html#a497968032be69c44969b045a888df706", null ],
