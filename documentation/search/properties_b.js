@@ -7,6 +7,8 @@ var searchData=
   ['modules',['Modules',['../class_m_f_p_p_1_1_player.html#a5de80a758b50b81d5c0b2e8f17223591',1,'MFPP::Player']]],
   ['mouselocked',['MouseLocked',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a7b6ff093708b0b5ef6711e55dcbbb811',1,'MFPP::Player::ControlSettings']]],
   ['mousesensitivity',['MouseSensitivity',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a5e4437687642cfe1dc4ef651ac03f223',1,'MFPP::Player::ControlSettings']]],
+  ['mousesensitivityxmultiplier',['MouseSensitivityXMultiplier',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#ad7141e1ed4a86a747bbd37e4e7429478',1,'MFPP::Player::ControlSettings']]],
+  ['mousesensitivityymultiplier',['MouseSensitivityYMultiplier',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#ac436d5a9ae54c5f36fbf554ffb1cbdd4',1,'MFPP::Player::ControlSettings']]],
   ['mousesmoothing',['MouseSmoothing',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a925ebce22e9a7d917c09112838d4085b',1,'MFPP::Player::ControlSettings']]],
   ['mousexaxis',['MouseXAxis',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a9cbade081fb3fb6489568e5666c72367',1,'MFPP::Player::ControlSettings']]],
   ['mouseyaxis',['MouseYAxis',['../class_m_f_p_p_1_1_player_1_1_control_settings.html#a66adb7b1fa96f77f562c3a5fa9376788',1,'MFPP::Player::ControlSettings']]],

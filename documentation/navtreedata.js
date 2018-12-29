@@ -22,7 +22,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html"
+"class_m_f_p_p_1_1_player_1_1_movement_settings.html#af807ca1e6c44028da03e4dfba503dfd5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

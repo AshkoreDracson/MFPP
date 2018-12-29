@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"class_m_f_p_p_1_1_player_1_1_movement_settings.html#af807ca1e6c44028da03e4dfba503dfd5":[1,0,0,7,5,17],
+"class_m_f_p_p_1_1_player_1_1_movement_settings.html#afa6770df558ec78b6f75e60df014824e":[1,0,0,7,5,7],
 "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html":[1,0,0,7,5,0],
 "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a059d2a9052d42fd2b66eaf666d8563ae":[1,0,0,7,5,0,5],
 "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html#a08766435eb64c3bbcdf8992dfd3c55fb":[1,0,0,7,5,0,6],
@@ -39,8 +41,8 @@ var NAVTREEINDEX1 =
 "class_m_f_p_p_1_1_player_module.html#ae723d114a6c364b92b184365f8aa65c7":[1,0,0,8,6],
 "class_m_f_p_p_1_1_player_module.html#af1cb876cdaf102bafa9c2416aba2e25b":[1,0,0,8,3],
 "classes.html":[1,1],
-"functions.html":[1,3,0],
 "functions.html":[1,3,0,0],
+"functions.html":[1,3,0],
 "functions_b.html":[1,3,0,1],
 "functions_c.html":[1,3,0,2],
 "functions_d.html":[1,3,0,3],
