@@ -1,15 +1,13 @@
 var hierarchy =
 [
-    [ "MFPP.Audio", "class_m_f_p_p_1_1_audio.html", null ],
     [ "MFPP.FootstepAsset.Data", "class_m_f_p_p_1_1_footstep_asset_1_1_data.html", null ],
-    [ "Editor", null, [
+    [ "UnityEditor.Editor", null, [
       [ "MFPP.Editor.BaseEditor", "class_m_f_p_p_1_1_editor_1_1_base_editor.html", [
         [ "MFPP.Editor.FootstepAssetEditor", "class_m_f_p_p_1_1_editor_1_1_footstep_asset_editor.html", null ],
         [ "MFPP.Editor.FootstepOverrideEditor", "class_m_f_p_p_1_1_editor_1_1_footstep_override_editor.html", null ],
         [ "MFPP.Editor.PlayerEditor", "class_m_f_p_p_1_1_editor_1_1_player_editor.html", null ]
       ] ]
     ] ],
-    [ "MFPP.Extensions", "class_m_f_p_p_1_1_extensions.html", null ],
     [ "MonoBehaviour", null, [
       [ "MFPP.FootstepOverride", "class_m_f_p_p_1_1_footstep_override.html", null ],
       [ "MFPP.Platform", "class_m_f_p_p_1_1_platform.html", null ],

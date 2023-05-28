@@ -1,6 +1,5 @@
 var class_m_f_p_p_1_1_player_1_1_control_settings =
 [
-    [ "ControlSettings", "class_m_f_p_p_1_1_player_1_1_control_settings.html#ac2d0ddbba2a5860bb42b6baf82592cb3", null ],
     [ "ControlsEnabled", "class_m_f_p_p_1_1_player_1_1_control_settings.html#add9d7aed17582754883a77644bf4cce7", null ],
     [ "CrouchButton", "class_m_f_p_p_1_1_player_1_1_control_settings.html#a07b8642d8a95af844d2874fc73c9f6ea", null ],
     [ "CrouchToggleButton", "class_m_f_p_p_1_1_player_1_1_control_settings.html#a15f3538a6376c6230faa3b7cde217438", null ],

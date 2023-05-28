@@ -3,7 +3,6 @@ var class_m_f_p_p_1_1_player_1_1_movement_settings =
     [ "CrouchSettings", "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings.html", "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_crouch_settings" ],
     [ "JumpSettings", "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_jump_settings.html", "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_jump_settings" ],
     [ "SprintSettings", "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_sprint_settings.html", "class_m_f_p_p_1_1_player_1_1_movement_settings_1_1_sprint_settings" ],
-    [ "MovementSettings", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a45161b77be6aafac7d742e1a318c470d", null ],
     [ "Acceleration", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#ae1307000e175bd16b4092d43ca87050d", null ],
     [ "AirAccelerate", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#ac54fbfadd88d9b42cf93e8a47b047dca", null ],
     [ "AirControl", "class_m_f_p_p_1_1_player_1_1_movement_settings.html#a020c6e7023701247b4cae2f6ad790cc2", null ],
